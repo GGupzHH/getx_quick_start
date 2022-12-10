@@ -10,6 +10,9 @@ abstract class AppRoutes {
   static const ValueBuild = '/value-build';
   static const BuiltIn = '/built-in';
 
+  static const Toy = '/toy';
+  static const ToyStart = '/toy-start';
+  static const ToyLogin = '/toy-login';
 
   static const Login = '/login';
   static const Notfound = '/not-found';

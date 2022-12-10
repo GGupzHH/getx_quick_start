@@ -11,6 +11,9 @@ import 'package:flutter_application_1/pages/getx/index.dart';
 import 'package:flutter_application_1/pages/home/index.dart';
 import 'package:flutter_application_1/pages/notFound/index.dart';
 import 'package:flutter_application_1/pages/obx/index.dart';
+import 'package:flutter_application_1/pages/toy/index.dart';
+import 'package:flutter_application_1/pages/toy/toy-login.dart';
+import 'package:flutter_application_1/pages/toy/toy-start.dart';
 import 'package:flutter_application_1/pages/value-build/index.dart';
 import 'package:get/route_manager.dart';
 
@@ -29,6 +32,11 @@ class AppPages {
       GetPage(name: AppRoutes.GetBuild, page: () => GetBuilderView()),
       GetPage(name: AppRoutes.ValueBuild, page: () => const ValueBuildView()),
       GetPage(name: AppRoutes.BuiltIn, page: () => BuiltInView()),
+    ]),
+
+    GetPage(name: AppRoutes.Toy, page: () => ToyView(), children: [
+      GetPage(name: AppRoutes.ToyStart, page: () => const ToyStartView()),
+      GetPage(name: AppRoutes.ToyLogin, page: () => const ToyLoginView()),
     ]),
     
     GetPage(name: AppRoutes.My, page: () => const AccountPage(), middlewares: [

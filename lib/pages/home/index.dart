@@ -14,6 +14,11 @@ class HomePage extends StatelessWidget {
         body: ListView(
           children: [
             ListTile(
+              title: const Text("玩具"),
+              subtitle: const Text('开始页面'),
+              onTap: () => Get.toNamed(AppRoutes.Toy),
+            ),
+            ListTile(
               title: const Text("导航-跳转路由 /home > /my"),
               subtitle: const Text('Get.toNamed("/my")'),
               onTap: () => Get.toNamed("/my"),
