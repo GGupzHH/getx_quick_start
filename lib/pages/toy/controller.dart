@@ -1,8 +1,7 @@
 import 'package:get/get.dart';
 
-class splashController extends GetxController {
-
-  final _obj = 0.obs;
-  set obj(value) => _obj.value = value;
-  get obj => _obj.value;
+class ToyController extends GetxController {
+  final _isUserNameValid = false.obs;
+  set isUserNameValid(value) => _isUserNameValid.value = value;
+  get isUserNameValid => _isUserNameValid.value;
 }
