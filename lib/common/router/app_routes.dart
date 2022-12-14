@@ -14,6 +14,9 @@ abstract class AppRoutes {
   static const ToyStart = '/toy-start';
   static const ToyLogin = '/toy-login';
 
+  static const LazyPut = '/lazy-put';
+  static const LazyNext = '/lazy-next';
+
   static const Login = '/login';
   static const Notfound = '/not-found';
 }

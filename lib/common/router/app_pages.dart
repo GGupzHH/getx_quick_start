@@ -9,6 +9,9 @@ import 'package:flutter_application_1/pages/frame/login/index.dart';
 import 'package:flutter_application_1/pages/get-builder/index.dart';
 import 'package:flutter_application_1/pages/getx/index.dart';
 import 'package:flutter_application_1/pages/home/index.dart';
+import 'package:flutter_application_1/pages/lazyPut/NextPageView.dart';
+import 'package:flutter_application_1/pages/lazyPut/bindings.dart';
+import 'package:flutter_application_1/pages/lazyPut/index.dart';
 import 'package:flutter_application_1/pages/notFound/index.dart';
 import 'package:flutter_application_1/pages/obx/index.dart';
 import 'package:flutter_application_1/pages/toy/index.dart';
@@ -32,9 +35,11 @@ class AppPages {
       GetPage(name: AppRoutes.GetBuild, page: () => GetBuilderView()),
       GetPage(name: AppRoutes.ValueBuild, page: () => const ValueBuildView()),
       GetPage(name: AppRoutes.BuiltIn, page: () => BuiltInView()),
+      GetPage(name: AppRoutes.LazyPut, binding: LazyBinding(), page: () => const LazyPutView()),
+      GetPage(name: AppRoutes.LazyNext, page: () => const NextPageView()),
     ]),
 
-    GetPage(name: AppRoutes.Toy, page: () => ToyView(), children: [
+    GetPage(name: AppRoutes.Toy, page: () => const ToyView(), children: [
       GetPage(name: AppRoutes.ToyStart, page: () => const ToyStartView()),
       GetPage(name: AppRoutes.ToyLogin, page: () => const ToyLoginView()),
     ]),

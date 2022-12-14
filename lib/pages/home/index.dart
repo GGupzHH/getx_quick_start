@@ -109,6 +109,15 @@ class HomePage extends StatelessWidget {
               },
             ),
             const Divider(),
+
+            ListTile(
+              title: const Text("lazy-put"),
+              subtitle: const Text('lazy-put'),
+              onTap: () async {
+                await Get.toNamed(AppRoutes.Home + AppRoutes.LazyPut);
+              },
+            ),
+            const Divider(),
           ],
         ));
   }
