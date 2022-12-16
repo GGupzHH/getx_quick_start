@@ -35,7 +35,8 @@ class HomePage extends StatelessWidget {
               onTap: () async {
                 var result = await Get.toNamed("/home/list_details",
                     arguments: {"id": '123'});
-                Get.snackbar("返回值", "success -> " + result["success"].toString());
+                Get.snackbar(
+                    "返回值", "success -> " + result["success"].toString());
               },
             ),
             const Divider(),
@@ -44,7 +45,8 @@ class HomePage extends StatelessWidget {
               subtitle: const Text('Get.toNamed("/home/details?id=777")'),
               onTap: () async {
                 var result = await Get.toNamed("/home/list_details?id=777");
-                Get.snackbar("返回值", "success -> " + result["success"].toString());
+                Get.snackbar(
+                    "返回值", "success -> " + result["success"].toString());
               },
             ),
             const Divider(),
@@ -53,7 +55,8 @@ class HomePage extends StatelessWidget {
               subtitle: const Text('Get.toNamed("/home/details")'),
               onTap: () async {
                 var result = await Get.toNamed("/home/details/999");
-                Get.snackbar("返回值", "success -> " + result["success"].toString());
+                Get.snackbar(
+                    "返回值", "success -> " + result["success"].toString());
               },
             ),
             const Divider(),
@@ -73,7 +76,6 @@ class HomePage extends StatelessWidget {
               },
             ),
             const Divider(),
-
             ListTile(
               title: const Text("Getx"),
               subtitle: const Text('Getx'),
@@ -82,7 +84,6 @@ class HomePage extends StatelessWidget {
               },
             ),
             const Divider(),
-
             ListTile(
               title: const Text("GetBuild"),
               subtitle: const Text('GetBuild'),
@@ -91,7 +92,6 @@ class HomePage extends StatelessWidget {
               },
             ),
             const Divider(),
-
             ListTile(
               title: const Text("ValueBuild"),
               subtitle: const Text('ValueBuild'),
@@ -100,7 +100,6 @@ class HomePage extends StatelessWidget {
               },
             ),
             const Divider(),
-
             ListTile(
               title: const Text("built-in"),
               subtitle: const Text('built-in'),
@@ -109,7 +108,14 @@ class HomePage extends StatelessWidget {
               },
             ),
             const Divider(),
-
+            ListTile(
+              title: const Text("put"),
+              subtitle: const Text('put'),
+              onTap: () async {
+                await Get.toNamed(AppRoutes.Home + AppRoutes.Put);
+              },
+            ),
+            const Divider(),
             ListTile(
               title: const Text("lazy-put"),
               subtitle: const Text('lazy-put'),

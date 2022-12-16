@@ -14,6 +14,8 @@ import 'package:flutter_application_1/pages/lazyPut/bindings.dart';
 import 'package:flutter_application_1/pages/lazyPut/index.dart';
 import 'package:flutter_application_1/pages/notFound/index.dart';
 import 'package:flutter_application_1/pages/obx/index.dart';
+import 'package:flutter_application_1/pages/put/index.dart';
+import 'package:flutter_application_1/pages/put/put_next.dart';
 import 'package:flutter_application_1/pages/toy/index.dart';
 import 'package:flutter_application_1/pages/toy/toy-login.dart';
 import 'package:flutter_application_1/pages/toy/toy-start.dart';
@@ -24,8 +26,10 @@ class AppPages {
   static const INITIAL = AppRoutes.Home;
 
   static final List<GetPage> routes = [
-    GetPage(name: AppRoutes.Login, page: () => const LoginView(), transition: Transition.downToUp),
-
+    GetPage(
+        name: AppRoutes.Login,
+        page: () => const LoginView(),
+        transition: Transition.downToUp),
     GetPage(name: AppRoutes.Home, page: () => const HomePage(), children: [
       GetPage(name: AppRoutes.Details, page: () => const DetailsPage()),
       GetPage(name: AppRoutes.ListDetails, page: () => const ListDetailsPage()),
@@ -35,18 +39,22 @@ class AppPages {
       GetPage(name: AppRoutes.GetBuild, page: () => GetBuilderView()),
       GetPage(name: AppRoutes.ValueBuild, page: () => const ValueBuildView()),
       GetPage(name: AppRoutes.BuiltIn, page: () => BuiltInView()),
-      GetPage(name: AppRoutes.LazyPut, binding: LazyBinding(), page: () => const LazyPutView()),
+      GetPage(name: AppRoutes.Put, page: () => PutView()),
+      GetPage(name: AppRoutes.PutNext, page: () => PutNextView()),
+      GetPage(
+          name: AppRoutes.LazyPut,
+          binding: LazyBinding(),
+          page: () => const LazyPutView()),
       GetPage(name: AppRoutes.LazyNext, page: () => const NextPageView()),
     ]),
-
     GetPage(name: AppRoutes.Toy, page: () => const ToyView(), children: [
       GetPage(name: AppRoutes.ToyStart, page: () => const ToyStartView()),
       GetPage(name: AppRoutes.ToyLogin, page: () => const ToyLoginView()),
     ]),
-    
-    GetPage(name: AppRoutes.My, page: () => const AccountPage(), middlewares: [
-      RouteAuthMiddleware(priority: 1)
-    ])
+    GetPage(
+        name: AppRoutes.My,
+        page: () => const AccountPage(),
+        middlewares: [RouteAuthMiddleware(priority: 1)])
   ];
 
   static final unknownRoute =
